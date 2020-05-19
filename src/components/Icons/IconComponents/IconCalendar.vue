@@ -1,0 +1,28 @@
+<template>
+  <svg-icon-base
+    v-bind="$props"
+    v-on="$listeners"
+    @mouseover="isHover = true"
+    @mouseleave="isHover = false"
+  >
+    <path
+      d="M15 15H12V12H15V15ZM10.5 7.5H7.5V10.5H10.5V7.5ZM15 7.5H12V10.5H15V7.5ZM6 12H3V15H6V12ZM10.5 12H7.5V15H10.5V12ZM6 7.5H3V10.5H6V7.5ZM18 1.5V18H0V1.5H2.25V2.25C2.25 3.07725 2.92275 3.75 3.75 3.75C4.57725 3.75 5.25 3.07725 5.25 2.25V1.5H12.75V2.25C12.75 3.07725 13.4227 3.75 14.25 3.75C15.0773 3.75 15.75 3.07725 15.75 2.25V1.5H18ZM16.5 6H1.5V16.5H16.5V6ZM15 0.75C15 0.336 14.6648 0 14.25 0C13.8352 0 13.5 0.336 13.5 0.75V2.25C13.5 2.664 13.8352 3 14.25 3C14.6648 3 15 2.664 15 2.25V0.75ZM4.5 2.25C4.5 2.664 4.16475 3 3.75 3C3.33525 3 3 2.664 3 2.25V0.75C3 0.336 3.33525 0 3.75 0C4.16475 0 4.5 0.336 4.5 0.75V2.25Z"
+      v-bind="pathAttrs"
+    />
+  </svg-icon-base>
+</template>
+
+<script lang="ts">
+import { Component, Emit, Prop } from 'vue-property-decorator';
+import SvgIconBase from '@/components/Icons/SvgIconBase.vue';
+
+@Component({ name: 'IconCalendar.vue' })
+export default class IconCalendar extends SvgIconBase {
+  @Prop({ default: '0 0 18 18' }) readonly viewBox!: string;
+  @Prop({ default: 'calendar' }) readonly title!: string;
+
+  public isHover: boolean = false;
+}
+</script>
+
+<style lang="sass"></style>

@@ -1,0 +1,92 @@
+//FADE
+//.fade-enter-active,
+//.fade-leave-active,
+//.fade-enter-to
+//  transition-duration: .35s
+//  transition-property: height, opacity
+//  transition-timing-function: ease
+//  overflow: hidden
+//.fade-enter,
+//.fade-leave-active
+//  opacity: 0
+.fade-enter-active, .fade-leave-active
+  transition-property: opacity
+  transition-duration: .1s
+
+.fade-enter-active
+  transition-delay: .35s
+
+.fade-enter, .fade-leave-active
+  opacity: 0
+ 
+
+
+//SLIDE
+.slide-enter-active,
+.slide-leave-active
+  transition: transform 0.5s ease
+.slide-enter,
+.slide-leave-to
+  transform: translateX(-100%)
+  transition: all .25s ease-in 0s
+
+
+.slide-right-leave-active,
+.slide-right-enter-active,
+.slide-right-enter-to,
+.slide-left-leave-active,
+.slide-left-enter-active,
+.slide-left-enter-to
+  transition: 0.5s cubic-bezier(.35,0,.25,1)
+.slide-left-enter 
+  transform: translate(100%, 0)
+.slide-left-leave-to
+  transform: translate(-100%, 0)
+.slide-right-enter 
+  transform: translate(-100%, 0)
+.slide-right-leave-to
+  transform: translate(100%, 0)
+
+//ZOOM
+.zoom-enter-active,
+.zoom-leave-active 
+  animation-duration: 0.25s
+  animation-fill-mode: both
+  animation-name: zoom
+.zoom-leave-active 
+  animation-direction: reverse
+@keyframes zoom 
+  from 
+    opacity: 0
+    transform: scale3d(0.8, 0.8, 0.8)
+  100% 
+    opacity: 1
+
+
+.flip-enter-active,
+.flip-leave-active 
+  animation: flip 3s ease
+.flip-leave-active 
+  animation-direction: reverse
+
+@keyframes flip
+  10%
+    transform: scale(1, 0.002)
+  35%
+    transform: scale(0.2, 0.002)
+    opacity: 1
+  50%
+    transform: scale(0.2, 0.002)
+    opacity: 0
+  85%
+    transform: scale(1, 0.002)
+    opacity: 1
+  100%
+    transform: scale(1, 1)
+
+//DROPDOWN
+.dropdown-enter-active,.dropdown-leave-active
+  transition: all .3s ease-in-out
+.dropdown-enter, .dropdown-leave-to
+  transform: translateX(2rem)
+  opacity: 0

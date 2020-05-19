@@ -1,0 +1,23 @@
+export default {
+  width: 'ширина',
+  height: 'высота',
+  color: 'цвет',
+  stroke: 'линия',
+  search: 'поиск',
+  size: 'размер',
+  button: 'кнопка',
+  icon: 'иконка',
+  small: 'маленький',
+  big: 'большой',
+  type: 'тип',
+  display: 'отображать',
+  locked: 'заблокированный',
+  unlocked: 'разблокированный',
+  help: 'помощь',
+  error: 'оишбка',
+  text: 'текст',
+  lang: 'язык',
+  right: 'право',
+  left: 'лево',
+  label: 'этикетка'
+};

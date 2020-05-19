@@ -1,0 +1,23 @@
+export default {
+  width: 'width',
+  height: 'height',
+  color: 'color',
+  stroke: 'stroke',
+  search: 'search',
+  size: 'size',
+  button: 'button',
+  icon: 'icon',
+  small: 'small',
+  big: 'big',
+  type: 'type',
+  display: 'display',
+  locked: 'locked',
+  unlocked: 'unlocked',
+  help: 'help',
+  error: 'error',
+  text: 'text',
+  lang: 'language',
+  right: 'right',
+  left: 'left',
+  label: 'label'
+};

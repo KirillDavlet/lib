@@ -1,0 +1,47 @@
+$colors: (
+  'dark': (
+    --bg-base: #263238,
+    --bg-hover: #29373d,
+    --bg-secondary: #32424A,
+    --bg-additional: #15181A,
+    --bg-input: rgba(27, 36, 40, .5),
+
+    --font-color: #c3d6e0,
+    --font-active: #ffffff,
+    --font-disabled: rgba(195, 214, 224, 0.3),
+    --font-transparent: rgba(195, 214, 224, .6),
+    --btn-primary-text-color: #ffffff,
+    --bg-radio: rgba(90, 129, 234, 0.12),
+
+    --primary: #5a81ea,
+    --primary-transparent: rgba(#5a81ea, .3),
+    --primary-hover: #628dff,
+    --primary-hover-transparent: rgba(98, 141, 255, .6),
+    --error: #e91e63,
+    --success: #81c784,
+    --yellow: #ffcb6b,
+    --violet: #b388ff
+  ),
+  'light': (
+    --bg-base: #E9F4FD,
+    --bg-hover: #FBFDFF,
+    --bg-secondary: #C9E4FB,
+    --bg-additional: #E7F0FB,
+    --bg-input: rgba(#BEC8F5, .5),
+
+    --font-color: #546E7A,
+    --font-active: #32424A,
+    --font-transparent: rgba(84, 110, 122, 0.6),
+    --btn-primary-text-color: #ffffff,
+    --bg-radio: rgba(90, 129, 234, 0.12),
+
+    --primary: #5a81ea,
+    --primary-transparent: rgba(#5a81ea, .3),
+    --primary-hover: #628dff,
+    --primary-hover-transparent: rgba(98, 141, 255, .2),
+    --error: #e91e63,
+    --success: #81c784,
+    --yellow: #ffcb6b,
+    --violet: #b388ff
+  )
+)

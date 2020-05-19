@@ -1,0 +1,28 @@
+<template>
+  <svg-icon-base
+    v-bind="$props"
+    v-on="$listeners"
+    @mouseover="isHover = true"
+    @mouseleave="isHover = false"
+  >
+    <path
+      d="M12 2C17.514 2 22 6.486 22 12C22 17.514 17.514 22 12 22C6.486 22 2 17.514 2 12C2 6.486 6.486 2 12 2ZM12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM10.041 17L5.541 12.681L6.936 11.246L10.016 14.183L17.037 7L18.459 8.409L10.041 17Z"
+      v-bind="pathAttrs"
+    />
+  </svg-icon-base>
+</template>
+
+<script lang="ts">
+import { Component, Emit, Prop } from 'vue-property-decorator';
+import SvgIconBase from '@/components/Icons/SvgIconBase.vue';
+
+@Component({ name: 'IconOk.vue' })
+export default class IconOk extends SvgIconBase {
+  @Prop({ default: 'ok' }) readonly title!: string;
+  @Prop({ default: '#81C784' }) readonly color!: string;
+
+  public isHover: boolean = false;
+}
+</script>
+
+<style lang="sass"></style>

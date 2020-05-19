@@ -1,0 +1,144 @@
+@use "sass:map"
+
+@import 'colors'
+@import "shadows"
+@import 'buttons'
+@import 'scrollbars'
+@import "animations"
+
+// COLORS  
+[data-theme="dark"]
+  *, *:after, *:active, *:hover, *:disabled, *:before, *:focus, *:focus-within, *:visited
+    @each $name, $color in map.get($colors, "dark") 
+      #{$name}: $color
+[data-theme="light"]
+  *, *:after, *:active, *:hover, *:disabled, *:before, *:focus, *:focus-within, *:visited
+    @each $name, $color in map.get($colors, "light") 
+      #{$name}: $color
+
+//SHADOWS
+[data-theme="dark"]
+  @each $name, $shadow in map.get($shadows, "dark") 
+      #{$name}: $shadow
+[data-theme="light"]
+  @each $name, $shadow in map.get($shadows, "light") 
+      #{$name}: $shadow
+
+//TYPOGRAPHY
+[data-theme="dark"]
+  --fw-regular: 400
+  --fw-medium: 500
+[data-theme="light"]
+  --fw-regular: 500
+  --fw-medium: 600
+body
+  font: $body-font
+  color: var(--font-color)
+  line-height: 140.6%
+  @include breakpoint(tablet)
+    font: $body-font-tb
+  @include breakpoint(phablet)
+    font: $body-font-tb
+  @include breakpoint(mobile)
+    font: $body-font-mb
+
+p, span, h1, h2, h3, h4, h5, label
+  line-height: 140.6%
+  padding: 0
+  margin: 0
+  color: var(--font-color)
+
+ul, li
+  color: var(--font-color)
+
+p, span
+  font: $body-font
+  color: var(--font-color)
+  @include breakpoint(tablet)
+    font: $body-font-tb
+  @include breakpoint(phablet)
+    font: $body-font-tb
+  @include breakpoint(mobile)
+    font: $body-font-mb
+
+h1, .header-font
+  font: $h1-style
+  @include breakpoint(tablet)
+    font: $h1-style-tb
+  @include breakpoint(phablet)
+    font: $h1-style-tb
+  @include breakpoint(mobile)
+    font: $h1-style-mb
+h2, .subheader-font
+  font: $h2-style
+  @include breakpoint(tablet)
+    font: $h2-style-tb
+  @include breakpoint(phablet)
+    font: $h2-style-tb
+  @include breakpoint(mobile)
+    font: $h2-style-mb
+//TYPOGRAPHY END
+
+html, body
+  padding: 0
+  margin: 0
+  width: 100%
+  height: 100%
+
+html
+  font-size: 10px //1rem
+  --b-radius: 1rem
+
+#app
+  background: var(--bg-base)
+  width: 100vw
+  height: 100vh
+  display: flex
+  flex-direction: column
+  .safe-area-inset
+    background-color: var(--bg-base)
+    &__top
+      height: $safe-area-inset-top
+    &__bottom
+      height: $safe-area-inset-bottom
+.home
+  width: 100%
+  height: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  position: relative
+  margin-top: 6rem
+  @include breakpoint(mobile)
+    margin-top: 4.4rem
+.page
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex-direction: column
+  overflow-x: auto
+  margin: 2rem
+  @include breakpoint(mobileonly)
+    margin: 0
+div
+  box-sizing: border-box
+  @include scrollbars(1rem,  var(--primary), var(--bg-base))
+  @include breakpoint(mobile)
+    @include scrollbars(.2rem, var(--primary), var(--bg-base))
+
+.lh
+  height: 52px
+  display: flex
+  align-items: center
+  padding: 0 16px
+  @include breakpoint(tablet)
+    height: 60px
+  @include breakpoint(mobile)
+    height: 60px
+
+
+
+
+
