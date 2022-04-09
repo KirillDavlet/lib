@@ -13,7 +13,7 @@
     "core-js": "^3.4.4",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.28",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.5",
